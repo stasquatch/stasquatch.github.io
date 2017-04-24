@@ -27,7 +27,6 @@ github_username:  acespacecase
 markdown: kramdown
 highlighter: rouge
 encoding: utf-8
-theme: minima
 gems:
   - jekyll-feed
 exclude:

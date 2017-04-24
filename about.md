@@ -1,7 +1,8 @@
 ---
 layout: page
-title: About
+title: About | Stacy Harrison
 permalink: /about/
 ---
 
-This is the base Jekyll theme
+<h2>About Stacy</h2>
+<p>about me</p>
