@@ -6,11 +6,22 @@
   background: linear-gradient(to right, #00a69c, #00a65b);
 }
 
+.bg-gradient-rev {
+  background: #00a69c;
+  background: -webkit-linear-gradient(right, #00a69c, #00a65b);
+  background: -o-linear-gradient(left, #00a69c, #00a65b);
+  background: -moz-linear-gradient(left, #00a69c, #00a65b);
+  background: linear-gradient(to left, #00a69c, #00a65b);
+}
+
 .main-padding {
   margin: 70px auto;
   padding: 50px;
   background: #fdfdfd;
 }
+
+
+/* BASIC STYLES */
 
 h1 {
   font-family: 'Ovo', Baskerville, serif;
@@ -23,12 +34,48 @@ h2.subhead {
   margin-top: 0;
   padding-top: 0;
   color: #00a69c;
+  font-weight:normal;
+}
+
+h2:nth-child(1), h3:nth-child(1), h4:nth-child(1) {
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 50px;
+  text-transform: lowercase;
+  font-weight: bold;
 }
 
 p {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
   font-size: 18px;
+  margin: 0 0 15px;
 }
+
+
+/* LINKS AND BUTTONS */
+
+a, a:visited {
+  color: #00a65b;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #00a69c;
+}
+
+.btn-default, .btn-default:hover {
+  border-color: #00a65b;
+  color: #00a65b;
+  font-size: 18px;
+}
+
+.btn-default:hover {
+  background: #f7f7f7;
+}
+
 
 /* NAVIGATION */
 
@@ -63,7 +110,10 @@ p {
 
 @media (min-width: 768px) {
   .sidebar {
-    border-right: 2px solid #00a69c;
     text-align: left;
+  }
+
+  .column-divider {
+    border-left: 2px solid #00a69c;
   }
 }

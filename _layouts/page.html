@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700|Ovo" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body class="bg-gradient">
       <!-- header -->
@@ -21,13 +22,14 @@
         <!-- nav bar -->
         <div class="row">
           <div class="col-xs-12">
-            <nav class="bg-gradient">
+            <nav class="bg-gradient-rev">
               <ul class="custom-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/blog">Blog</a></li>
+                <li><a href="http://stacythedesigner.com" target="_blank">Design <i class="fa fa-external-link" aria-hidden="true" style="font-size: 12px; vertical-align:super;"></i></a></li>
               </ul>
             </nav>
           </div>
@@ -36,17 +38,20 @@
         <!-- sidebar and content -->
         <div class="row">
           <div class="col-sm-3 sidebar">
-            <h3>about me</h3>
-            <p>social links</p>
-            <p>blurb</p>
-            <p>latest posts?</p>
+            <img src="/images/stacyharrison-photo2-min.jpg" class="img-responsive" alt="Stacy Harrison, software developer in Cleveland, OH" style="margin-bottom: 15px;">
+            <p>I'm a <strong>Software developer</strong> located in Cleveland, OH, formerly/still designer, marketer, writer, and entrepreneur-enthusiast.</p>
+            <p>
+              <a href="https://github.com/acespacecase" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Github</a><br />
+              <a href="https://twitter.com/stacyeharrison" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br />
+              <a href="https://www.linkedin.com/in/stacy-harrison/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;LinkedIn</a><br />
+            </p>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-9 column-divider">
             {{ content }}
           </div>
         </div>
 
       </div><!--container-->
   </body>
-  <script src="javascript/bootstrap.min.js"></script>
+  <!-- <script src="{{ "javascript/bootstrap.min.js" | relative_url }}"></script> -->
 </html>
