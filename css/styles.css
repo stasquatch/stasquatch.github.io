@@ -38,6 +38,10 @@ h1 {
   font-family: 'Ovo', Baskerville, serif;
 }
 
+h2, h3, h4, h5 {
+  font-family: 'Ovo', Baskerville, serif;
+}
+
 h2.subhead {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
   font-size: 20px;
