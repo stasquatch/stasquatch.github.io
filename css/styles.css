@@ -168,3 +168,10 @@ a:hover, a:active, a:focus {
     border-left: 2px solid #00a69c;
   }
 }
+
+
+/* PROJECT PAGE STYLES */
+
+.project-desc {
+  padding: 5px 0 15px;
+}
