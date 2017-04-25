@@ -20,6 +20,17 @@
   background: #fdfdfd;
 }
 
+@media (min-width: 768px) {
+  .body-container {
+    padding: 0 0 0 20px;
+  }
+
+  .sidebar-container {
+    padding: 0 20px 0 0;
+  }
+
+}
+
 
 /* BASIC STYLES */
 
@@ -51,6 +62,25 @@ p {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
   font-size: 18px;
   margin: 0 0 15px;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+li {
+  font-family: 'Muli', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  list-style: none;
+  margin-left: 0;
+}
+
+li:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  color: #00a69c;
+  margin-right: 8px;
+  margin-left: 5px;
 }
 
 
@@ -89,6 +119,11 @@ a:hover, a:active, a:focus {
 .custom-nav li {
   display: inline;
   padding: 10px 15px;
+  list-style: none;
+}
+
+.custom-nav li:before {
+  content: "";
 }
 
 .custom-nav li a {
@@ -102,15 +137,27 @@ a:hover, a:active, a:focus {
   color: #eaeaea;
 }
 
+@media (max-width: 768px) {
+  .custom-nav li {
+    padding: 10px 8px;
+  }
+}
+
 /* SIDEBAR INFO */
 
 .sidebar {
   text-align: center;
+  border-top: 2px solid #00a69c;
+  margin-top: 25px;
+  padding-top: 25px;
 }
 
 @media (min-width: 768px) {
   .sidebar {
     text-align: left;
+    border:0;
+    padding-top: 0;
+    margin-top:0;
   }
 
   .column-divider {

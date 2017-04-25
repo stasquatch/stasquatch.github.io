@@ -4,21 +4,18 @@ title: Stacy Harrison, Developer
 ---
 ## Many Hat Wearer
 
-I'm acquiring a lot of hats. By choice. And I love it. I started my career
-as a print designer, which quickly morphed into digital design (because
-it's the 21st century). When I began working in a marketing department
-I picked up digital marketing to add to my arsenal. In the spring of
-2016, I quit my day job to freelance full-time. I was able to blend
-design, marketing, entrepreneurship, and web development daily for
-some really awesome clients.
+I'm acquiring a lot of hats. By choice. And I love it.
 
-Now, I'm a **software developer**. I've got an itch to create, to build,
-to teach, and to write.
+Currently, I'm a **software developer**. I've got an itch to create, to build,
+to teach, and to write. I also wear the hats of: designer, web developer,
+marketer, writer, and entrepreneur.
 
-On this website I am to document the programming projects I'm working on
-in my free time, to blog about my journey as designer-turned-programmer,
-and to provide resources that have helped me along the way to those
-also learning.
+On this website I aim:
+* to document the programming projects I'm working on;
+* to blog about my journey as designer-turned-programmer;
+* to provide resources that have helped me along the way to those also learning.
+
+Want to chat? Reach out on [Twitter](https://twitter.com/stacyeharrison) or [LinkedIn](https://www.linkedin.com/in/stacy-harrison/).
 
 ## Latest From the Blog
 

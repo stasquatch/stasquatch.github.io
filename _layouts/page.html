@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ page.title }}</title>
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700|Ovo" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}">
@@ -37,17 +38,21 @@
 
         <!-- sidebar and content -->
         <div class="row">
-          <div class="col-sm-3 sidebar">
-            <img src="/images/stacyharrison-photo2-min.jpg" class="img-responsive" alt="Stacy Harrison, software developer in Cleveland, OH" style="margin-bottom: 15px;">
-            <p>I'm a <strong>Software developer</strong> located in Cleveland, OH, formerly/still designer, marketer, writer, and entrepreneur-enthusiast.</p>
-            <p>
-              <a href="https://github.com/acespacecase" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Github</a><br />
-              <a href="https://twitter.com/stacyeharrison" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br />
-              <a href="https://www.linkedin.com/in/stacy-harrison/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;LinkedIn</a><br />
-            </p>
+          <div class="col-sm-9 col-md-push-3 column-divider">
+            <div class="body-container">
+              {{ content }}
+            </div>
           </div>
-          <div class="col-sm-9 column-divider">
-            {{ content }}
+          <div class="col-sm-3 col-md-pull-9 sidebar">
+            <div class="sidebar-container">
+              <img src="/images/stacyharrison-photo2-min.jpg" class="img-responsive" alt="Stacy Harrison, software developer in Cleveland, OH" style="margin-bottom: 15px;">
+              <p>I'm a <strong>software developer</strong> located in Cleveland, OH, formerly/still designer, web developer, marketer, writer, and embroiderer.</p>
+              <p>
+                <a href="https://github.com/acespacecase" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Github</a><br />
+                <a href="https://twitter.com/stacyeharrison" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br />
+                <a href="https://www.linkedin.com/in/stacy-harrison/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;LinkedIn</a><br />
+              </p>
+            </div>
           </div>
         </div>
 
