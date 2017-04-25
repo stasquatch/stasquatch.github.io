@@ -19,6 +19,28 @@ On this website I aim:
 * to blog about my journey as designer-turned-programmer;
 * to provide resources that have helped me along the way to those also learning.
 
+## In the Community
+
+### Speaking
+* "WordPress Setup & Security for Beginners", Akron Women in Tech, *May 16, 2017*
+* "MailChimp Email Marketing for Small Businesses," Heart Life Marketing, *April 7, 2017*
+
+### Mentoring
+* Design mentor for Design for American (CWRU)
+* Design mentor for Akron Women in Tech's Code Along
+* Volunteer organizer for Akron Women in Tech
+
+### Participating
+* [Akron Women in Tech](http://akronwit.org/)
+* [Cleveland Lean Startup Circle](https://www.meetup.com/Cleveland-Lean-Startup-Circle/)
+* [Refresh Cleveland](http://refreshcleveland.com/)
+* [UX Akron](https://www.meetup.com/uxakron/)
+* [GiveCamp](http://clevelandgivecamp.org/)
+* [WordCamp:Kent](https://2017.kent.wordcamp.org/)
+* [Weapons of Mass Creation Fest](https://wmcfest.com/)
+* [Rustbelt Refresh](http://rustbeltrefresh.com/)
+
+
 ## When the Tech is Off
 
 After powering down the computer, I enjoy [embroidering](https://www.instagram.com/stacyeharrison/), playing pinball, and drinking copious amounts of tea.
