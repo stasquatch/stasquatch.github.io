@@ -118,6 +118,7 @@ a:hover, a:active, a:focus {
   list-style:none;
   padding: 10px;
   margin: 40px 0;
+  line-height: 240%;
 }
 
 .custom-nav li {
@@ -145,6 +146,12 @@ a:hover, a:active, a:focus {
   .custom-nav li {
     padding: 10px 8px;
   }
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 3px solid #eaeaea;
+  padding-bottom: 3px;
 }
 
 /* SIDEBAR INFO */

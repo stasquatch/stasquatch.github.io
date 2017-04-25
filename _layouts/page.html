@@ -24,13 +24,14 @@
         <!-- nav bar -->
         <div class="row">
           <div class="col-xs-12">
+            {% assign current = page.url | downcase | split: '/' %}
             <nav class="bg-gradient-rev">
               <ul class="custom-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/resources">Resources</a></li>
-                <li><a href="/blog">Blog</a></li>
+                <li><a href="/" {% if current[0] == nil %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/about" {% if current[1] == 'about' %}class="active"{% endif %}>About</a></li>
+                <li><a href="/projects" {% if current[1] == 'projects' %}class="active"{% endif %}>Projects</a></li>
+                <li><a href="/resources" {% if current[1] == 'resources' %}class="active"{% endif %}>Resources</a></li>
+                <li><a href="/blog" {% if current[1] == 'blog' %}class="active"{% endif %}>Blog</a></li>
                 <li><a href="http://stacythedesigner.com" target="_blank">Design <i class="fa fa-external-link" aria-hidden="true" style="font-size: 12px; vertical-align:super;"></i></a></li>
               </ul>
             </nav>
