@@ -163,7 +163,7 @@ a:hover, a:active, a:focus {
   padding-top: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .sidebar {
     text-align: left;
     border:0;
@@ -180,5 +180,5 @@ a:hover, a:active, a:focus {
 /* PROJECT PAGE STYLES */
 
 .project-desc {
-  padding: 5px 0 15px;
+  padding: 10px 0 15px;
 }
