@@ -6,9 +6,7 @@ title: Stacy Harrison, Developer
 
 I'm acquiring a lot of hats. By choice. And I love it.
 
-Currently, I'm a **software developer**. I've got an itch to create, to build,
-to teach, and to write. I also wear the hats of: designer, web developer,
-marketer, writer, and entrepreneur.
+Currently, I'm becoming a **software developer**. I've got an itch to create, to build, to teach, and to write. I also wear the hats of: designer, web developer, marketer, writer, and entrepreneur.
 
 On this website I aim:
 * to document the programming projects I'm working on;
