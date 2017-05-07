@@ -57,9 +57,12 @@ h2:nth-child(1), h3:nth-child(1), h4:nth-child(1) {
 }
 
 h2 {
-  margin-top: 50px;
   text-transform: lowercase;
   font-weight: bold;
+}
+
+h2, h3 {
+  margin-top: 50px;
 }
 
 p {
@@ -68,6 +71,9 @@ p {
   margin: 0 0 15px;
 }
 
+
+/* LIST STYLES */
+
 ul {
   padding-left: 15px;
 }
@@ -75,16 +81,23 @@ ul {
 li {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
   font-size: 18px;
+}
+
+ul li {
   list-style: none;
   margin-left: 0;
 }
 
-li:before {
+ul li:before {
   content: "\f005";
   font-family: FontAwesome;
   color: #00a69c;
   margin-right: 8px;
   margin-left: 5px;
+}
+
+ol li {
+  margin-bottom: 10px;
 }
 
 
