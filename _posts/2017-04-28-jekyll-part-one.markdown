@@ -3,6 +3,7 @@ layout: page
 title:  "Using Jekyll: Part One"
 date:   2017-04-28 03:36:00 -0400
 categories: tutorial
+excerpt: "A guide to setting up Jekyll on Windows, great for beginners"
 ---
 
 ## Using Jekyll, Part One: Installing Jekyll on Windows
