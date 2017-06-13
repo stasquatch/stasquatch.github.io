@@ -19,11 +19,13 @@ On this website I aim:
 * to blog about my journey as designer-turned-programmer;
 * to provide resources that have helped me along the way to those also learning.
 
+
 ## In the Community
 
 ### Speaking
-* "WordPress Setup & Security for Beginners", Akron Women in Tech, *May 16, 2017*
-* "MailChimp Email Marketing for Small Businesses," Heart Life Marketing, *April 7, 2017*
+* ["Javascript30.com Remote 'Book' Club"](https://www.meetup.com/Akron-Women-In-Tech/events/240634915/), Akron Women in Tech, *July 11-August 15, 2017*
+* ["WordPress Setup & Security for Beginners"](http://bit.ly/2qrobf7), Akron Women in Tech, *May 16, 2017*
+* ["MailChimp Email Marketing for Small Businesses"](http://bit.ly/EmailMarketingForSmallBiz), Heart Life Marketing, *April 7, 2017*
 
 ### Mentoring
 * Design mentor for Design for American (CWRU)
