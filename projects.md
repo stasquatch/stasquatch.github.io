@@ -11,7 +11,7 @@ For more projects (and to see source code), visit my [Github](https://github.com
 <div class="row">
   <div class="col-md-6" style="margin-top: 15px;">
     <a href="https://github.com/acespacecase/campground-reservation" target="new">
-      <img src="/images/VendingMachineScreenshot.png" class="img-responsive">
+      <img src="/images/CampgroundScreenshot.png" class="img-responsive">
     </a>
     <p class="project-desc"><a href="https://github.com/acespacecase/campground-reservation" target="new">The Campground Reservation Application</a> served as the second mini-capstone, completed in pairs, at Tech Elevator. We completed this project as the conclusion to the SQL database module, and our app connects with a SQL database of information about our parks, campgrounds, and reservations. It is written in C# and runs as a command line application.</p>
   </div>
