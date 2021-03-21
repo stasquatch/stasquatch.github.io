@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import '@fontsource/fredoka-one'
+import '@fontsource/fredoka-one/index.css'
 import styled from "styled-components"
 
 const Wrapper = styled.header`
@@ -48,13 +48,13 @@ const HandleTag = styled.span`
 `;
 
 const Header = () => (
-  <Wrapper>
-    <Title>
-      <TitleLink to="/">
+  <Wrapper className={`wrapper`}>
+    <Title className={`title`}>
+      <TitleLink className={`title-link`} to="/">
         Stacy Harrison
       </TitleLink>
     </Title>
-    <HandleTag>
+    <HandleTag className={`handle-tag`}>
       @stasquatch
     </HandleTag>
   </Wrapper>

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+.c0 {
+  background: linear-gradient(#ded1bd,transparent);
+  margin-bottom: 2rem;
+  padding: 5rem 3rem;
+}
+
+.c1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.c2 {
+  color: #683b2b;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Fredoka One";
+  font-size: 5rem;
+  text-transform: lowercase;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 1rem;
+  margin-left: 20px;
+  background: #d49e8d;
+  border-radius: .5rem;
+  color: #faf6f2;
+  vertical-align: text-bottom;
+  position: relative;
+  z-index: 1;
+}
+
+.c3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  margin: -7px 0;
+  background: #d49e8d;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+<header
+  className="c0 wrapper"
+>
+  <h1
+    className="c1 title"
+  >
+    <a
+      className="c2 title-link"
+      href="/"
+    >
+      Stacy Harrison
+    </a>
+  </h1>
+  <span
+    className="c3 handle-tag"
+  >
+    @stasquatch
+  </span>
+</header>
+`;
