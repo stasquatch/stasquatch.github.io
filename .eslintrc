@@ -1,18 +1,19 @@
 {
-  "parser": "babel-eslint", // uses babel-eslint transforms
+  "parser": "babel-eslint",
   "settings": {
     "react": {
-      "version": "detect" // detect react version
+      "version": "detect"
     }
   },
   "env": {
-    "node": true // defines things like process.env when generating through node
+    "node": true,
+    "jest": true
   },
   "plugins": [
     "jsx-a11y"
   ],
   "extends": [
-    "eslint:recommended", // use recommended configs
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ]
