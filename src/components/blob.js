@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const variance = 20; // in px
+const variance = 25; // in px
 
 const colors = [
   '#d5e6ea', // light blue

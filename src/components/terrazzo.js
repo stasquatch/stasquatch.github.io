@@ -68,6 +68,9 @@ const terrazzo = () => {
         <TinyBlobs offset={largeBlobSize - globalOffset}>
           {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-2')}
         </TinyBlobs>
+        <TinyBlobs offset={(largeBlobSize - globalOffset) / 2}>
+          {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-3')}
+        </TinyBlobs>
       </TerrazzoWrapper>
     </>
   );
