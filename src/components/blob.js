@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
+const variance = 20; // in px
+
 const colors = [
   '#d5e6ea', // light blue
   '#022a37', // dark blue
@@ -30,6 +32,7 @@ function Blob({ size }) {
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{
       height: `${size}px`,
       width: `${size}px`,
+      margin: `${Math.floor(Math.random() * variance) - (variance / 2)}px`
     }}
       aria-hidden="true"
       focusable="false"
