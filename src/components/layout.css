@@ -4,7 +4,7 @@ html {
   font: 62.5%/1.45em "Lato", serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  background: #faf6f2;
+  background: #fff;
 }
 body {
   margin: 0 auto;
@@ -15,12 +15,6 @@ body {
   font-size: 2rem;
   font-weight: normal;
   word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-  max-width: 800px;
 }
 article,
 aside,
