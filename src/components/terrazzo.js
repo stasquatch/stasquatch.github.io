@@ -4,7 +4,7 @@ import Blob from "./blob";
 import { useCurrentWidth, useCurrentHeight } from '../hooks/useCurrentWidth';
 
 const largeBlobSize = 100; // in px
-const tinyBlobSize = 20; // in px
+const tinyBlobSize = 30; // in px
 const globalOffset = 10; // in px
 
 function blobCount(width, height, size, spacing = 0) {
