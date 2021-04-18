@@ -1,13 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import '@fontsource/fredoka-one/index.css'
+import '@fontsource/nunito-sans'
+import '@fontsource/nunito-sans/900.css'
 import styled from "styled-components"
-
-const Wrapper = styled.header`
-  background: linear-gradient(#ded1bd, transparent);
-  margin-bottom: 2rem;
-  padding: 5rem 3rem;
-  `;
 
 const Title = styled.h1`
   margin: 0;
@@ -17,7 +12,8 @@ const Title = styled.h1`
 const TitleLink = styled(Link)`
   color: #683b2b;
   text-decoration: none;
-  font-family: "Fredoka One";
+  font-family: "Nunito Sans";
+  font-weight: 900;
   font-size: 5rem;
   text-transform: lowercase;
   `;
@@ -48,7 +44,7 @@ const HandleTag = styled.span`
 `;
 
 const Header = () => (
-  <Wrapper className={`wrapper`}>
+  <>
     <Title className={`title`}>
       <TitleLink className={`title-link`} to="/">
         Stacy Harrison
@@ -57,7 +53,7 @@ const Header = () => (
     <HandleTag className={`handle-tag`}>
       @stasquatch
     </HandleTag>
-  </Wrapper>
+  </>
 )
 
 export default Header
