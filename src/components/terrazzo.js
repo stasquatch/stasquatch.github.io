@@ -16,28 +16,28 @@ const TerrazzoWrapper = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
-  @media (min-width: 769px) {
+  @media (min-width: ${props => props.breakpoints.tablet}px) {
     flex-direction: column;
     padding: 0 0 0 ${globalOffset}px;
     margin: 0 ${tinyBlobSize}px 0 0;
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
     flex-direction: row;
     padding: ${globalOffset}px 0 0 0;
     margin: 0 0 ${tinyBlobSize}px 0;
   }
 `;
 
-const TinyBlobs = styled.div`
+const BlobLine = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
-  @media (min-width: 769px) {
+  @media (min-width: ${props => props.breakpoints.tablet}px) {
     flex-direction: column;
     height: 100%;
     left: ${props => props.offset + globalOffset}px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
     flex-direction: row;
     width: 100%;
     top: ${props => props.offset + globalOffset}px;
@@ -52,7 +52,7 @@ function renderBlobs(size, count, idPrefix) {
   return blobs;
 }
 
-const terrazzo = () => {
+const terrazzo = (props) => {
   let width = useCurrentWidth();
   let height = useCurrentHeight();
 
@@ -60,17 +60,17 @@ const terrazzo = () => {
 
   return (
     <>
-      <TerrazzoWrapper>
+      <TerrazzoWrapper breakpoints={props.breakpoints}>
         {renderBlobs(largeBlobSize, numberOfBlobs, 'large')}
-        <TinyBlobs offset={0}>
+        <BlobLine offset={0} breakpoints={props.breakpoints}>
           {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-1')}
-        </TinyBlobs>
-        <TinyBlobs offset={largeBlobSize - globalOffset}>
+        </BlobLine>
+        <BlobLine offset={largeBlobSize - globalOffset} breakpoints={props.breakpoints}>
           {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-2')}
-        </TinyBlobs>
-        <TinyBlobs offset={(largeBlobSize - globalOffset) / 2}>
+        </BlobLine>
+        <BlobLine offset={(largeBlobSize - globalOffset) / 2} breakpoints={props.breakpoints}>
           {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-3')}
-        </TinyBlobs>
+        </BlobLine>
       </TerrazzoWrapper>
     </>
   );

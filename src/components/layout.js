@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import '@fontsource/lato'
@@ -13,7 +6,7 @@ import Terrazzo from "./terrazzo"
 import styled, { createGlobalStyle } from 'styled-components';
 
 const Main = styled.main`
-  padding: 20px 0;
+  padding: 2rem;
   max-width: 800px;
 `;
 
@@ -46,14 +39,18 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const breakpoints = {
+  tablet: 769
+};
+
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
       <Wrapper>
-        <Terrazzo />
+        <Terrazzo breakpoints={breakpoints} />
         <Main>
-          <Header />
+          <Header breakpoints={breakpoints} />
           {children}
         </Main>
       </Wrapper>
