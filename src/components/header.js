@@ -6,6 +6,8 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   line-height: 4rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 `;
 
 const Title = styled.h1`
@@ -18,7 +20,7 @@ const TitleLink = styled(Link)`
   text-decoration: none;
   font-family: "Nunito Sans";
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 5.5rem;
   text-transform: lowercase;
   `;
 
@@ -33,6 +35,7 @@ const HandleTag = styled.span`
     vertical-align: text-bottom;
     position: relative;
     z-index: 1;
+    font-size: 2.5rem;
   
     &::after {
       content: '';
