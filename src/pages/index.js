@@ -9,7 +9,6 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>about me</h2>
       {posts.map(post => (
         <div key={post.node.slug}>
           <Link to={post.node.slug}>

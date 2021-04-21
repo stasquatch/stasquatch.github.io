@@ -22,10 +22,44 @@ const TitleLink = styled(Link)`
   font-weight: 900;
   font-size: 5.5rem;
   text-transform: lowercase;
-  `;
+  &:hover,
+  &:focus {
+    color: #41241a;
+    
+  }
+`;
 
-const HandleTag = styled.span`
+const HandleTagWrapper = styled.span`
   display: inline-block;
+  @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
+    margin-top: 1.2rem;
+    display: block;
+    > a > span {
+      margin-left: 0;
+      &::after {
+        top: 0;
+        left: 15px;
+      }
+    }
+  }
+`;
+
+const HandleTag = styled.a`
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-color: #d5e6ea;
+  }
+  &:hover,
+  &:focus {
+    > span,
+    > span::after {
+      background: #b28374;
+    }
+  }
   > span {
     padding: 1rem;
     margin-left: 20px;
@@ -50,18 +84,6 @@ const HandleTag = styled.span`
       z-index: -1;
     }
   }
-
-  @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
-    margin-top: 1.2rem;
-    display: block;
-    > span {
-      margin-left: 0;
-      &::after {
-        top: 0;
-        left: 15px;
-      }
-    }
-  }
 `;
 
 const Header = (props) => {
@@ -74,11 +96,13 @@ const Header = (props) => {
           Stacy Harrison
         </TitleLink>
       </Title>
-      <HandleTag className={`handle-tag`} breakpoints={breakpoints}>
-        <span>
-          @stasquatch
-        </span>
-      </HandleTag>
+      <HandleTagWrapper breakpoints={breakpoints}>
+        <HandleTag className={`handle-tag`} href="https://github.com/stasquatch" target="_blank" rel="noopener noreferrer">
+          <span>
+            @stasquatch
+          </span>
+        </HandleTag>
+      </HandleTagWrapper>
     </HeaderWrapper>
   )
 }
