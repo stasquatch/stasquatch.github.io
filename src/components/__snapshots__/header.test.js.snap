@@ -2,9 +2,9 @@
 
 exports[`Header renders correctly 1`] = `
 .c0 {
-  background: linear-gradient(#ded1bd,transparent);
-  margin-bottom: 2rem;
-  padding: 5rem 3rem;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 
 .c1 {
@@ -16,13 +16,17 @@ exports[`Header renders correctly 1`] = `
   color: #683b2b;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: "Fredoka One";
-  font-size: 5rem;
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 5.5rem;
   text-transform: lowercase;
 }
 
 .c3 {
   display: inline-block;
+}
+
+.c3 > span {
   padding: 1rem;
   margin-left: 20px;
   background: #d49e8d;
@@ -31,9 +35,10 @@ exports[`Header renders correctly 1`] = `
   vertical-align: text-bottom;
   position: relative;
   z-index: 1;
+  font-size: 2.5rem;
 }
 
-.c3::after {
+.c3 > span::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -48,8 +53,24 @@ exports[`Header renders correctly 1`] = `
   z-index: -1;
 }
 
-<header
-  className="c0 wrapper"
+@media (max-width:NaNpx) {
+  .c3 {
+    margin-top: 1.2rem;
+    display: block;
+  }
+
+  .c3 > span {
+    margin-left: 0;
+  }
+
+  .c3 > span::after {
+    top: 0;
+    left: 15px;
+  }
+}
+
+<div
+  className="c0"
 >
   <h1
     className="c1 title"
@@ -64,7 +85,9 @@ exports[`Header renders correctly 1`] = `
   <span
     className="c3 handle-tag"
   >
-    @stasquatch
+    <span>
+      @stasquatch
+    </span>
   </span>
-</header>
+</div>
 `;

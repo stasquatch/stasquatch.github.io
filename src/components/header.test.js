@@ -1,7 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import Header from "./header"
-import 'jest-styled-components'
 
 describe("Header", () => {
   it("renders correctly", () => {
@@ -9,5 +8,5 @@ describe("Header", () => {
       .create(<Header />)
       .toJSON()
     expect(tree).toMatchSnapshot()
-  })
+  });
 })

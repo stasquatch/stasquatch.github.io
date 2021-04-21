@@ -64,19 +64,23 @@ const HandleTag = styled.span`
   }
 `;
 
-const Header = (props) => (
-  <HeaderWrapper>
-    <Title className={`title`}>
-      <TitleLink className={`title-link`} to="/">
-        Stacy Harrison
-      </TitleLink>
-    </Title>
-    <HandleTag className={`handle-tag`} breakpoints={props.breakpoints}>
-      <span>
-        @stasquatch
-      </span>
-    </HandleTag>
-  </HeaderWrapper>
-)
+const Header = (props) => {
+  let breakpoints = props.breakpoints || {};
+
+  return (
+    <HeaderWrapper>
+      <Title className={`title`}>
+        <TitleLink className={`title-link`} to="/">
+          Stacy Harrison
+        </TitleLink>
+      </Title>
+      <HandleTag className={`handle-tag`} breakpoints={breakpoints}>
+        <span>
+          @stasquatch
+        </span>
+      </HandleTag>
+    </HeaderWrapper>
+  )
+}
 
 export default Header
