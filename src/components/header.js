@@ -24,7 +24,7 @@ const TitleLink = styled(Link)`
   text-transform: lowercase;
   &:hover,
   &:focus {
-    color: #41241a;
+    color: #935c48;
     
   }
 `;
@@ -57,13 +57,13 @@ const HandleTag = styled.a`
   &:focus {
     > span,
     > span::after {
-      background: #b28374;
+      background: #1d6177;
     }
   }
   > span {
     padding: 1rem;
     margin-left: 20px;
-    background: #d49e8d;
+    background: #022a37;
     border-radius: .5rem;
     color: #faf6f2;
     vertical-align: text-bottom;
@@ -79,7 +79,7 @@ const HandleTag = styled.a`
       width: 15px;
       height: 15px;
       margin: -7px 0;
-      background: #d49e8d;
+      background: #022a37;
       transform: rotate(45deg);
       z-index: -1;
     }
