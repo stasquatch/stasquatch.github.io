@@ -1,10 +1,11 @@
 
 import { useEffect, useState } from 'react';
 
-const getWidth = () => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-const getHeight = () => window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+const getWidth = () => document.body.clientWidth || window.innerWidth;
+const getHeight = () => document.body.clientHeight || window.innerHeight;
 
 export function useCurrentWidth() {
+  console.log(document.body.clientHeight);
   let [width, setWidth] = useState(getWidth());
 
   useEffect(() => {

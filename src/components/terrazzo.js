@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Blob from "./blob";
-import { useCurrentWidth, useCurrentHeight } from '../hooks/useCurrentWidth';
+import { useCurrentWidth, useCurrentHeight } from '../hooks/window-dimensions';
 
 const largeBlobSize = 100; // in px
 const tinyBlobSize = 30; // in px

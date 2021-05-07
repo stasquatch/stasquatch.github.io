@@ -7,12 +7,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const Main = styled.main`
   padding: 2rem;
-  max-width: 800px;
+  max-width: 700px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  height: 100vh;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -23,8 +22,6 @@ const GlobalStyles = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font: 62.5%/1.45em "Lato", serif, sans-serif;
-    box-sizing: border-box;
-    overflow-y: scroll;
     background: #fff;
   }
   body {
@@ -36,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2rem;
     font-weight: normal;
     word-wrap: break-word;
+    line-height: 1.4;
   }
 `;
 
