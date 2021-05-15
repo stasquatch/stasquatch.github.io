@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Blob from "./blob";
-import { useCurrentWidth, useCurrentHeight } from '../hooks/window-dimensions';
+import debounce from 'debounce';
 
 const largeBlobSize = 100; // in px
 const tinyBlobSize = 30; // in px
@@ -52,28 +52,61 @@ function renderBlobs(size, count, idPrefix) {
   return blobs;
 }
 
-const terrazzo = (props) => {
-  let width = useCurrentWidth();
-  let height = useCurrentHeight();
+class Terrazzo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+      height: 0,
+      numberOfBlobs: 0,
+    }
+  }
 
-  let numberOfBlobs = blobCount(width, height, largeBlobSize);
+  componentDidMount() {
+    let width = document.body.clientWidth;
+    let height = document.body.clientHeight;
+    this.setState({
+      width,
+      height,
+      numberOfBlobs: blobCount(width, height, largeBlobSize)
+    });
 
-  return (
-    <>
-      <TerrazzoWrapper breakpoints={props.breakpoints}>
-        {renderBlobs(largeBlobSize, numberOfBlobs, 'large')}
-        <BlobLine offset={0} breakpoints={props.breakpoints}>
-          {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-1')}
-        </BlobLine>
-        <BlobLine offset={largeBlobSize - globalOffset} breakpoints={props.breakpoints}>
-          {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-2')}
-        </BlobLine>
-        <BlobLine offset={(largeBlobSize - globalOffset) / 2} breakpoints={props.breakpoints}>
-          {renderBlobs(tinyBlobSize, numberOfBlobs + 1, 'tiny-3')}
-        </BlobLine>
-      </TerrazzoWrapper>
-    </>
-  );
-};
+    window.addEventListener('resize', debounce(this.resizeListener, 200));
+  }
 
-export default terrazzo;
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resizeListener);
+  }
+
+  resizeListener = () => {
+    let width = document.body.clientWidth;
+    let height = document.body.clientHeight;
+
+    this.setState({
+      width,
+      height,
+      numberOfBlobs: blobCount(width, height, largeBlobSize)
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <TerrazzoWrapper breakpoints={this.props.breakpoints}>
+          {renderBlobs(largeBlobSize, this.state.numberOfBlobs, 'large')}
+          <BlobLine offset={0} breakpoints={this.props.breakpoints}>
+            {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-1')}
+          </BlobLine>
+          <BlobLine offset={largeBlobSize - globalOffset} breakpoints={this.props.breakpoints}>
+            {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-2')}
+          </BlobLine>
+          <BlobLine offset={(largeBlobSize - globalOffset) / 2} breakpoints={this.props.breakpoints}>
+            {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-3')}
+          </BlobLine>
+        </TerrazzoWrapper>
+      </>
+    );
+  }
+}
+
+export default Terrazzo;
