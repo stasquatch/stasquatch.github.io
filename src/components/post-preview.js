@@ -20,7 +20,7 @@ const PostTitle = styled(Link)`
 `;
 
 const PostExcerpt = styled.blockquote`
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 0;
 `;
 
@@ -34,17 +34,6 @@ const PostMetadata = styled.p`
   }
 `;
 
-const ReadMoreLink = styled(Link)`
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #022a37;
-  &:hover,
-  &:focus {
-    color: #1d6177;
-    text-decoration: underline;
-  }
-`;
-
 const PostPreview = ({ post }) => {
   return (
     <PostPreviewWrapper key={post.id}>
@@ -53,7 +42,7 @@ const PostPreview = ({ post }) => {
       </PostTitle>
       <PostExcerpt>{post.excerpt}</PostExcerpt>
       <PostMetadata>
-        <ReadMoreLink to={post.slug}>Read more</ReadMoreLink>
+        <Link to={post.slug}>Read more</Link>
         <span>
           {post.timeToRead} minute read
         </span>

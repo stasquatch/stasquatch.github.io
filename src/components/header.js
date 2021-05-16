@@ -1,13 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import '@fontsource/nunito-sans'
-import '@fontsource/nunito-sans/900.css'
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   line-height: 4rem;
   margin-bottom: 4rem;
   margin-top: 1rem;
+  @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -32,7 +33,7 @@ const TitleLink = styled(Link)`
 const HandleTagWrapper = styled.span`
   display: inline-block;
   @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     display: block;
     > a > span {
       margin-left: 0;
@@ -90,7 +91,7 @@ const Header = (props) => {
   let breakpoints = props.breakpoints || {};
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper breakpoints={breakpoints}>
       <Title className={`title`}>
         <TitleLink className={`title-link`} to="/">
           Stacy Harrison
