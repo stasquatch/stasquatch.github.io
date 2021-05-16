@@ -58,6 +58,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/
+        }
+      }
+    }
   ],
 }
