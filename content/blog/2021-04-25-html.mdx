@@ -1,0 +1,63 @@
+---
+date: "2021-04-25"
+title: "The HTML tag"
+category: "html5-series"
+---
+
+## Quick look
+
+| | |
+|---|---|
+| **Required?** | sort of? |
+| **Common attributes** | `lang`, `dir` |
+
+## Summary
+
+`html` is the root element, so all your HTML should live inside this tag. 
+While it's not strictly required, it's good practice to include it. If
+you omit the tag, browsers will usually insert it for you. Because
+browsers can have different behavior, you _may_ get unexpected side effects
+relying on this implementation. Explicitly defining the `html` tag also
+allows you to define the language of the document.
+
+Immediate children can only be one `head` and one `body` (in that order).
+
+The CSS psuedo-class `:root` will select the `html` tag.
+
+## Attributes
+
+`lang`
+
+The `lang` attribute accepts any valid language code and defaults to `unknown`.
+This attribute tells screen readers what language to use to announce the page.
+Depending on the language code you set in the `lang` attribute, you may also want to
+set `dir="rtl"` on the `html` tag to denote whether text is read right-to-left 
+or left-to-right.
+
+[Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+## Usage
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    …
+  </head>
+  <body>
+    …
+  </body>
+</html>
+```
+
+_Note: `…` denotes miscellaneous HTML, removed for brevity._
+
+## Links
+
+[MDN: The HTML Document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)
+
+[MDN: The lang attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+
+[BCP47 Language Code Lookup](https://r12a.github.io/app-subtags/)
+
+[:root CSS psuedo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
