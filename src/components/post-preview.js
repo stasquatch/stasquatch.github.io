@@ -7,16 +7,9 @@ const PostPreviewWrapper = styled.article`
 `;
 
 const PostTitle = styled(Link)`
-  color: #022a37;
   font-family: 'Nunito Sans';
   font-size: 2.5rem;
   font-weight: 900;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    color: #1d6177;
-    text-decoration: underline;
-  }
 `;
 
 const PostExcerpt = styled.blockquote`
