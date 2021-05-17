@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import PostMetadata from './post-metadata';
 
 const PostPreviewWrapper = styled.article`
   margin-bottom: 5rem;
@@ -17,16 +18,6 @@ const PostExcerpt = styled.blockquote`
   padding: 0;
 `;
 
-const PostMetadata = styled.p`
-  font-size: 1.6rem;
-  margin: 2.5rem 0;
-  font-family: 'Nunito Sans';
-  *:not(:first-child)::before {
-    content: '–';
-    padding: 10px;
-  }
-`;
-
 const PostPreview = ({ post }) => {
   return (
     <PostPreviewWrapper key={post.id}>
@@ -34,15 +25,12 @@ const PostPreview = ({ post }) => {
         {post.frontmatter.title}
       </PostTitle>
       <PostExcerpt>{post.excerpt}</PostExcerpt>
-      <PostMetadata>
-        <Link to={post.slug}>Read more</Link>
-        <span>
-          {post.timeToRead} minute read
-        </span>
-        <span>
-          {post.frontmatter.date}
-        </span>
-      </PostMetadata>
+      <PostMetadata
+        showReadMoreLink={true}
+        slug={post.slug}
+        timeToRead={post.timeToRead}
+        date={post.frontmatter.date}
+      />
     </PostPreviewWrapper>
   );
 };
