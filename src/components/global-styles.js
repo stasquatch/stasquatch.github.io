@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
+// site-wide fonts
+import '@fontsource/source-code-pro';
+import '@fontsource/nunito-sans';
+import '@fontsource/nunito-sans/900.css';
+import '@fontsource/lato';
+import '@fontsource/lato/900.css';
+
 const GlobalStyles = createGlobalStyle`
 html {
   -ms-text-size-adjust: 100%;
@@ -25,7 +32,7 @@ html, body {
   padding: 0;
 }
 
-h2 {
+h3 {
   font-family: "Nunito Sans";
   font-weight: 900;
   font-size: 2rem;

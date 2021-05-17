@@ -5,12 +5,6 @@ import Terrazzo from "./terrazzo"
 import styled from 'styled-components';
 import GlobalStyles from './global-styles';
 
-// site-wide fonts
-import '@fontsource/source-code-pro';
-import '@fontsource/nunito-sans';
-import '@fontsource/nunito-sans/900.css';
-import '@fontsource/lato';
-
 const Main = styled.main`
   padding: 2rem;
   max-width: 700px;
