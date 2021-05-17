@@ -10,6 +10,14 @@ const AboutPage = () => {
     <Layout>
       <SEO title="About" />
 
+      <h2>About the Stasquatch</h2>
+      <p>
+        Ambitious and efficient full-stack engineer driven by providing users with an accessible experience, writing maintainable code, and collaborating with a diverse team. Additional experience in design, UX, and copywriting.
+      </p>
+      <p>
+        Why <code>stasquatch</code>? It&#39;s a fun intersection of fun and speculation. Feel free to imagine me as a bigfoot on a laptop just looking for just the right gif.
+      </p>
+
       <h2>Around the Internet</h2>
       <LogoRow />
 
