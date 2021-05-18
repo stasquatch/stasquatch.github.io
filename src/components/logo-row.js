@@ -8,7 +8,6 @@ const LogoRowWrapper = styled.p`
   svg {
     width: 4rem;
     height: 4rem;
-    margin-right: 1.5rem;
 
     path {
       fill: #022a37;
@@ -27,35 +26,46 @@ const LogoRowWrapper = styled.p`
   }
 `;
 
+const LogoSpacer = styled.span`
+  padding: 0.5rem;
+  margin-right: 1rem;
+`;
+
 const LogoRow = () => {
   return (
     <LogoRowWrapper>
-      <a
-        href="https://github.com/stasquatch"
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="View my GitHub profile"
-      >
-        <GitHubLogo />
-      </a>
+      <LogoSpacer>
+        <a
+          href="https://github.com/stasquatch"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="View my GitHub profile"
+        >
+          <GitHubLogo />
+        </a>
+      </LogoSpacer>
 
-      <a
-        href="https://www.linkedin.com/in/stacy-harrison/"
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="View my LinkedIn profile"
-      >
-        <LinkedInLogo />
-      </a>
+      <LogoSpacer>
+        <a
+          href="https://www.linkedin.com/in/stacy-harrison/"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="View my LinkedIn profile"
+        >
+          <LinkedInLogo />
+        </a>
+      </LogoSpacer>
 
-      <a
-        href="https://twitter.com/stasquatch"
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="View my Twitter profile"
-      >
-        <TwitterLogo />
-      </a>
+      <LogoSpacer>
+        <a
+          href="https://twitter.com/stasquatch"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="View my Twitter profile"
+        >
+          <TwitterLogo />
+        </a>
+      </LogoSpacer>
     </LogoRowWrapper>
   )
 }
