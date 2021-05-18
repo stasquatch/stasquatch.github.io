@@ -46,9 +46,10 @@ h3 {
   border-bottom: 1pt solid #022a37;
   color: #022a37;
   margin: 4rem 0 0.5rem 0;
-  &:first-of-type {
-    margin-top: 1rem;
-  }
+}
+
+h2 + h3 {
+  margin-top: 1rem; /* only reduce margin when it's the immediate next sibling */
 }
 
 code {
