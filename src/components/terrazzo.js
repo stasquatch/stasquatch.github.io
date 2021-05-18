@@ -20,11 +20,13 @@ const TerrazzoWrapper = styled.div`
     flex-direction: column;
     padding: 0 0 0 ${globalOffset}px;
     margin: 0 ${tinyBlobSize}px 0 0;
+    min-width: 115px;
   }
   @media (max-width: ${props => props.breakpoints.tablet - 1}px) {
     flex-direction: row;
     padding: ${globalOffset}px 0 0 0;
     margin: 0 0 ${tinyBlobSize}px 0;
+    min-height: 115px;
   }
 `;
 
