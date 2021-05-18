@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import PostMetadata from './post-metadata';
+import Metadata from './metadata';
 
 const PostPreviewWrapper = styled.article`
   margin-bottom: 5rem;
@@ -14,7 +14,7 @@ const PostTitle = styled(Link)`
 `;
 
 const PostExcerpt = styled.blockquote`
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
   padding: 0;
 `;
 
@@ -25,12 +25,15 @@ const PostPreview = ({ post }) => {
         {post.frontmatter.title}
       </PostTitle>
       <PostExcerpt>{post.excerpt}</PostExcerpt>
-      <PostMetadata
-        showReadMoreLink={true}
-        slug={post.slug}
-        timeToRead={post.timeToRead}
-        date={post.frontmatter.date}
-      />
+      <Metadata>
+        <Link to={post.slug}>Read more</Link>
+        <span>
+          {post.timeToRead} minute read
+        </span>
+        <span>
+          {post.frontmatter.date}
+        </span>
+      </Metadata>
     </PostPreviewWrapper>
   );
 };

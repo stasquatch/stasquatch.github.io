@@ -3,10 +3,10 @@ import Layout from './layout'
 import SEO from './seo';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import PostMetadata from './post-metadata';
+import Metadata from './metadata';
 
 const PostTitle = styled.h2`
-  margin-bottom: -2rem; // compensate for large margin on PostMetadata
+  margin-bottom: -1rem; // compensate for large margin on Metadata
 `;
 
 const Posts = ({ children }) => {
@@ -37,11 +37,14 @@ const Posts = ({ children }) => {
       <PostTitle>
         {title}
       </PostTitle>
-      <PostMetadata
-        showReadMoreLink={false}
-        timeToRead={timeToRead}
-        date={date}
-      />
+      <Metadata>
+        <span>
+          {timeToRead} minute read
+        </span>
+        <span>
+          {date}
+        </span>
+      </Metadata>
       {children}
     </Layout>
   );
