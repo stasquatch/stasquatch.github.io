@@ -87,6 +87,17 @@ const HandleTag = styled.a`
   }
 `;
 
+const NavigationLink = styled(Link)`
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+
+`;
+
+const Navigation = styled.nav`
+  display: block;
+  margin-top: 1rem;
+`;
+
 const Header = (props) => {
   let breakpoints = props.breakpoints || {};
 
@@ -104,6 +115,9 @@ const Header = (props) => {
           </span>
         </HandleTag>
       </HandleTagWrapper>
+      <Navigation>
+        <NavigationLink to="/about">About</NavigationLink>
+      </Navigation>
     </HeaderWrapper>
   )
 }
