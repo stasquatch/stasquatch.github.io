@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import PostMetadata from './post-metadata';
 
 const PostTitle = styled.h2`
-  font-size: 3.5rem;
-  font-weight: normal;
   margin-bottom: -2rem; // compensate for large margin on PostMetadata
 `;
 

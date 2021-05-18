@@ -32,6 +32,12 @@ html, body {
   padding: 0;
 }
 
+h2 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin: 4rem 0 1.5rem 0;
+}
+
 h3 {
   font-family: "Nunito Sans";
   font-weight: 900;
@@ -40,6 +46,9 @@ h3 {
   border-bottom: 1pt solid #022a37;
   color: #022a37;
   margin: 4rem 0 0.5rem 0;
+  &:first-of-type {
+    margin-top: 1rem;
+  }
 }
 
 code {

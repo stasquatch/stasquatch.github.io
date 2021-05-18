@@ -22,31 +22,45 @@ const AboutPage = () => {
       <LogoRow />
 
       <h2>Skills</h2>
-      <SkillsList skills={skills} />
+      <h3>Frontend</h3>
+      <SkillsList skills={frontendSkills} />
+
+      <h3>Backend</h3>
+      <SkillsList skills={backendSkills} />
+
+      <h3>Other Skills</h3>
+      <SkillsList skills={otherSkills} />
 
     </Layout>
   )
 }
 
-const skills = [
+const frontendSkills = [
   'JavaScript',
   'Ember.js',
-  'React Ruby on Rails',
-  'RSpec HTML5',
+  'React',
+  'HTML5',
   'CSS3',
-  'JS/ES6+ Node',
-  'Next.js',
-  'Express.js',
   'QUnit',
   'Jest',
-  'C#',
-  'ASP.NET',
   'Bootstrap',
   'Bulma',
-  'WCAG 2.0 AA CompSkillItemance',
+  'WCAG 2.0 AA Compliance',
   'WAVE',
   'Axe',
-  'Jaws screen reader',
+  'Jaws screen reader'
+];
+
+const backendSkills = [
+  'Ruby on Rails',
+  'RSpec',
+  'Node',
+  'Express.js',
+  'C#',
+  'ASP.NET'
+];
+
+const otherSkills = [
   'BDD',
   'Cucumber',
   'Selenium',
