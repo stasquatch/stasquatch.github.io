@@ -16,21 +16,48 @@ exports[`Header renders correctly 1`] = `
   color: #683b2b;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 900;
   font-size: 5.5rem;
   text-transform: lowercase;
+}
+
+.c2:hover,
+.c2:focus {
+  color: #935c48;
 }
 
 .c3 {
   display: inline-block;
 }
 
-.c3 > span {
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:active,
+.c4:visited,
+.c4:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #d5e6ea;
+  text-decoration-color: #d5e6ea;
+}
+
+.c4:hover > span,
+.c4:focus > span,
+.c4:hover > span::after,
+.c4:focus > span::after {
+  background: #1d6177;
+}
+
+.c4 > span {
   padding: 1rem;
   margin-left: 20px;
-  background: #d49e8d;
-  border-radius: .5rem;
+  background: #022a37;
+  border-radius: 0.5rem;
   color: #faf6f2;
   vertical-align: text-bottom;
   position: relative;
@@ -38,7 +65,7 @@ exports[`Header renders correctly 1`] = `
   font-size: 2.5rem;
 }
 
-.c3 > span::after {
+.c4 > span::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -46,24 +73,43 @@ exports[`Header renders correctly 1`] = `
   width: 15px;
   height: 15px;
   margin: -7px 0;
-  background: #d49e8d;
+  background: #022a37;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: -1;
 }
 
+.c6 {
+  padding: 0.75rem;
+}
+
+.c6:first-child {
+  margin-left: -0.75rem;
+}
+
+.c5 {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media (max-width:NaNpx) {
+  .c0 {
+    text-align: center;
+  }
+}
+
 @media (max-width:NaNpx) {
   .c3 {
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     display: block;
   }
 
-  .c3 > span {
+  .c3 > a > span {
     margin-left: 0;
   }
 
-  .c3 > span::after {
+  .c3 > a > span::after {
     top: 0;
     left: 15px;
   }
@@ -83,11 +129,34 @@ exports[`Header renders correctly 1`] = `
     </a>
   </h1>
   <span
-    className="c3 handle-tag"
+    className="c3"
   >
-    <span>
-      @stasquatch
-    </span>
+    <a
+      className="c4 handle-tag"
+      href="https://github.com/stasquatch"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span>
+        @stasquatch
+      </span>
+    </a>
   </span>
+  <nav
+    className="c5"
+  >
+    <a
+      className="c6"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      className="c6"
+      href="/html5-series"
+    >
+      HTML5 Series
+    </a>
+  </nav>
 </div>
 `;
