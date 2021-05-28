@@ -66,13 +66,6 @@
     "prepare": "husky install",
     "deploy": "gatsby build && gh-pages -d public -b built"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
