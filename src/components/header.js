@@ -88,9 +88,10 @@ const HandleTag = styled.a`
 `;
 
 const NavigationLink = styled(Link)`
-  padding: 0.5rem;
-  margin-left: -0.5rem;
-
+  padding: 0.75rem;
+  &:first-child {
+    margin-left: -0.75rem;
+  }
 `;
 
 const Navigation = styled.nav`
@@ -117,6 +118,7 @@ const Header = (props) => {
       </HandleTagWrapper>
       <Navigation>
         <NavigationLink to="/about">About</NavigationLink>
+        <NavigationLink to="/html5-series">HTML5 Series</NavigationLink>
       </Navigation>
     </HeaderWrapper>
   )
