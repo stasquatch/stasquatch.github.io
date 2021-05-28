@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 62.5%/1.45em "Lato", serif, sans-serif;
+  font: 10px/3rem "Lato", serif, sans-serif;
   background: #fff;
 }
 
@@ -23,7 +23,6 @@ body {
   font-size: 2rem;
   font-weight: normal;
   word-wrap: break-word;
-  line-height: 1.4;
 }
 
 html, body {
