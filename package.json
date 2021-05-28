@@ -64,7 +64,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "prepare": "husky install",
-    "deploy": "gatsby build && gh-pages -d public built"
+    "deploy": "gatsby build && gh-pages -d public -b built"
   },
   "repository": {
     "type": "git",
