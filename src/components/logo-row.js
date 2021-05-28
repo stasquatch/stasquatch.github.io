@@ -67,7 +67,7 @@ const LogoRow = () => {
         </a>
       </LogoSpacer>
     </LogoRowWrapper>
-  )
-}
+  );
+};
 
 export default LogoRow;

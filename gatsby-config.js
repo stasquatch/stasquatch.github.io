@@ -11,7 +11,7 @@ module.exports = {
         stages: ['develop'],
         extensions: ['js', 'jsx'],
         exclude: ['node_modules', '.cache', 'public'],
-      }
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/posts.js"),
+          default: require.resolve('./src/components/posts.js'),
         },
       },
     },
@@ -38,7 +38,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: 'gatsby-plugin-page-creator',
       options: {
         path: `${__dirname}/content/blog`,
       },
@@ -60,13 +60,13 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /images/
-        }
-      }
+          include: /images/,
+        },
+      },
     },
     'gatsby-plugin-use-query-params',
   ],
-}
+};

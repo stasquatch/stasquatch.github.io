@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './layout'
+import Layout from './layout';
 import SEO from './seo';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
@@ -12,21 +12,22 @@ const PostTitle = styled.h2`
 const Posts = ({ children }) => {
   const data = useStaticQuery(
     graphql`
-    {
-      allMdx {
-        edges {
-          node {
-            id
-            timeToRead
-            frontmatter {
-              date(formatString: "MMMM Do, YYYY")
-              title
+      {
+        allMdx {
+          edges {
+            node {
+              id
+              timeToRead
+              frontmatter {
+                date(formatString: "MMMM Do, YYYY")
+                title
+              }
             }
           }
         }
       }
-    }
-  `);
+    `
+  );
 
   let { title, date } = data.allMdx.edges[0].node.frontmatter;
   let timeToRead = data.allMdx.edges[0].node.timeToRead;
@@ -34,16 +35,10 @@ const Posts = ({ children }) => {
   return (
     <Layout>
       <SEO title={title} />
-      <PostTitle>
-        {title}
-      </PostTitle>
+      <PostTitle>{title}</PostTitle>
       <Metadata>
-        <span>
-          {timeToRead} minute read
-        </span>
-        <span>
-          {date}
-        </span>
+        <span>{timeToRead} minute read</span>
+        <span>{date}</span>
       </Metadata>
       {children}
     </Layout>

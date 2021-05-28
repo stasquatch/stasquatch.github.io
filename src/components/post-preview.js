@@ -21,18 +21,12 @@ const PostExcerpt = styled.blockquote`
 const PostPreview = ({ post }) => {
   return (
     <PostPreviewWrapper key={post.id}>
-      <PostTitle to={post.slug}>
-        {post.frontmatter.title}
-      </PostTitle>
+      <PostTitle to={post.slug}>{post.frontmatter.title}</PostTitle>
       <PostExcerpt>{post.excerpt}</PostExcerpt>
       <Metadata>
         <Link to={post.slug}>Read more</Link>
-        <span>
-          {post.timeToRead} minute read
-        </span>
-        <span>
-          {post.frontmatter.date}
-        </span>
+        <span>{post.timeToRead} minute read</span>
+        <span>{post.frontmatter.date}</span>
       </Metadata>
     </PostPreviewWrapper>
   );

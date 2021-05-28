@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
-const Html5SeriesPage = (props) => {
+const Html5SeriesPage = props => {
   let posts = props.data.allMdx.edges;
 
   return (
@@ -12,12 +12,12 @@ const Html5SeriesPage = (props) => {
       <SEO title="HTML5 Blog Series" />
       <h2>HTML5 Blog Series</h2>
       <p>
-        The HTML5 Series is my attempt at revisiting and studying
-        semantic HTML5 tags. As a full-stack engineer passionate in
-        accessibility, it&#39;s critical to fully understand how
-        assistive technologies interact with the software I write.
+        The HTML5 Series is my attempt at revisiting and studying semantic HTML5
+        tags. As a full-stack engineer passionate in accessibility, it&#39;s
+        critical to fully understand how assistive technologies interact with
+        the software I write.
       </p>
-      {posts &&
+      {posts && (
         <ul>
           {posts.map(post => (
             <li key={post.node.id}>
@@ -27,19 +27,14 @@ const Html5SeriesPage = (props) => {
             </li>
           ))}
         </ul>
-      }
+      )}
     </Layout>
-  )
+  );
 };
 
 export const query = graphql`
-{
-    allMdx(
-      sort: {
-        fields: [frontmatter___title]
-        order: ASC
-      }
-    ) {
+  {
+    allMdx(sort: { fields: [frontmatter___title], order: ASC }) {
       edges {
         node {
           id

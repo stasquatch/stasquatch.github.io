@@ -1,28 +1,25 @@
-import * as React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { graphql } from 'gatsby'
-import PostPreview from '../components/post-preview'
+import * as React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { graphql } from 'gatsby';
+import PostPreview from '../components/post-preview';
 
-const IndexPage = (props) => {
+const IndexPage = props => {
   let posts = props.data.allMdx.edges;
 
   return (
     <Layout>
       <SEO title="Home" />
-      {posts.map(post => <PostPreview key={post.node.id} post={post.node} />)}
+      {posts.map(post => (
+        <PostPreview key={post.node.id} post={post.node} />
+      ))}
     </Layout>
-  )
+  );
 };
 
 export const query = graphql`
   {
-    allMdx(
-      sort: {
-        fields: [frontmatter___date]
-        order: ASC
-      }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           id
@@ -39,4 +36,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage
+export default IndexPage;

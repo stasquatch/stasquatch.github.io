@@ -1,7 +1,7 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import Header from "./header"
-import Terrazzo from "./terrazzo"
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Header from './header';
+import Terrazzo from './terrazzo';
 import styled from 'styled-components';
 import GlobalStyles from './global-styles';
 
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const breakpoints = {
-  tablet: 769
+  tablet: 769,
 };
 
 const Layout = ({ children }) => {
@@ -34,11 +34,11 @@ const Layout = ({ children }) => {
         </Main>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

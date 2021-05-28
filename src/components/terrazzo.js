@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Blob from "./blob";
+import Blob from './blob';
 import debounce from 'debounce';
 
 const largeBlobSize = 100; // in px
@@ -9,7 +9,7 @@ const globalOffset = 10; // in px
 
 function blobCount(width, height, size, spacing = 0) {
   let containerLength = width > 768 ? height : width;
-  return Math.floor((containerLength) / (size + spacing + globalOffset));
+  return Math.floor(containerLength / (size + spacing + globalOffset));
 }
 
 const TerrazzoWrapper = styled.div`
@@ -61,7 +61,7 @@ class Terrazzo extends Component {
       width: 0,
       height: 0,
       numberOfBlobs: 0,
-    }
+    };
   }
 
   componentDidMount() {
@@ -70,7 +70,7 @@ class Terrazzo extends Component {
     this.setState({
       width,
       height,
-      numberOfBlobs: blobCount(width, height, largeBlobSize)
+      numberOfBlobs: blobCount(width, height, largeBlobSize),
     });
 
     window.addEventListener('resize', debounce(this.resizeListener, 200));
@@ -87,9 +87,9 @@ class Terrazzo extends Component {
     this.setState({
       width,
       height,
-      numberOfBlobs: blobCount(width, height, largeBlobSize)
+      numberOfBlobs: blobCount(width, height, largeBlobSize),
     });
-  }
+  };
 
   render() {
     return (
@@ -99,10 +99,16 @@ class Terrazzo extends Component {
           <BlobLine offset={0} breakpoints={this.props.breakpoints}>
             {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-1')}
           </BlobLine>
-          <BlobLine offset={largeBlobSize - globalOffset} breakpoints={this.props.breakpoints}>
+          <BlobLine
+            offset={largeBlobSize - globalOffset}
+            breakpoints={this.props.breakpoints}
+          >
             {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-2')}
           </BlobLine>
-          <BlobLine offset={(largeBlobSize - globalOffset) / 2} breakpoints={this.props.breakpoints}>
+          <BlobLine
+            offset={(largeBlobSize - globalOffset) / 2}
+            breakpoints={this.props.breakpoints}
+          >
             {renderBlobs(tinyBlobSize, this.state.numberOfBlobs + 1, 'tiny-3')}
           </BlobLine>
         </TerrazzoWrapper>

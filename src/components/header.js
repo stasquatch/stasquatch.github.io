@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
   line-height: 4rem;
@@ -19,14 +19,13 @@ const Title = styled.h1`
 const TitleLink = styled(Link)`
   color: #683b2b;
   text-decoration: none;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 900;
   font-size: 5.5rem;
   text-transform: lowercase;
   &:hover,
   &:focus {
     color: #935c48;
-    
   }
 `;
 
@@ -65,13 +64,13 @@ const HandleTag = styled.a`
     padding: 1rem;
     margin-left: 20px;
     background: #022a37;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     color: #faf6f2;
     vertical-align: text-bottom;
     position: relative;
     z-index: 1;
     font-size: 2.5rem;
-  
+
     &::after {
       content: '';
       position: absolute;
@@ -99,7 +98,7 @@ const Navigation = styled.nav`
   margin-top: 1rem;
 `;
 
-const Header = (props) => {
+const Header = props => {
   let breakpoints = props.breakpoints || {};
 
   return (
@@ -110,10 +109,13 @@ const Header = (props) => {
         </TitleLink>
       </Title>
       <HandleTagWrapper breakpoints={breakpoints}>
-        <HandleTag className={`handle-tag`} href="https://github.com/stasquatch" target="_blank" rel="noopener noreferrer">
-          <span>
-            @stasquatch
-          </span>
+        <HandleTag
+          className={`handle-tag`}
+          href="https://github.com/stasquatch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>@stasquatch</span>
         </HandleTag>
       </HandleTagWrapper>
       <Navigation>
@@ -121,7 +123,7 @@ const Header = (props) => {
         <NavigationLink to="/html5-series">HTML5 Series</NavigationLink>
       </Navigation>
     </HeaderWrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

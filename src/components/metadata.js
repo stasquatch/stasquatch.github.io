@@ -12,11 +12,7 @@ const MetadataWrapper = styled.p`
 `;
 
 const Metadata = ({ children }) => {
-  return (
-    <MetadataWrapper>
-      {children}
-    </MetadataWrapper>
-  )
-}
+  return <MetadataWrapper>{children}</MetadataWrapper>;
+};
 
 export default Metadata;
