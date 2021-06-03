@@ -78,6 +78,9 @@ class Terrazzo extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.resizeListener);
+    this.setState = () => {
+      return;
+    };
   }
 
   resizeListener = () => {
