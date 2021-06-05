@@ -1,0 +1,67 @@
+---
+date: '2021-06-03'
+title: 'The body tag'
+category: 'html5-series'
+---
+
+### Quick look
+
+|                       |                |
+| --------------------- | -------------- |
+| **Required?**         | sort of?       |
+| **Common attributes** | typically none |
+| **Common aria**       | none allowed   |
+
+### Summary
+
+The `body` tag is where nearly all your presentational HTML will go.
+It's considered a section element, in good company with `nav`, `section`,
+and others. Section elements are used to provide meaningful structure
+to the page, so that browsers and assistive devices have more context
+to the content within each element. For example, a `nav` should be
+interpreted differently than a `body` element.
+
+While it's not strictly required, it's good practice to include it. If
+you omit the tag, browsers will usually insert it for you. Because
+browsers can have different behavior, you _may_ get unexpected side effects
+relying on this implementation. Explicitly defining the `body` tag also
+allows you to define the language of the document, if you haven't already
+defined it on the `html` tag.
+
+`body` must be the second child of the `html` tag (`head` being the first child).
+
+In JavaScript, you can access the body element via `document.body`.
+
+### Attributes
+
+`lang`
+
+While you can set the `lang` and `dir` on a `body` tag, you typically should set it
+on the `html` instead. Setting the `lang` on `body` means all the meta information
+in the `head` tag will be lacking the language declaration.
+
+[Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+### Usage
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    …
+  </head>
+  <body>
+    …
+  </body>
+</html>
+```
+
+_Note: `…` denotes miscellaneous HTML, removed for brevity._
+
+### Links
+
+[MDN: The body tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
+
+[MDN: Section elements](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots)
+
+[`lang` tag on `html` instead of `body`](https://www.w3.org/International/questions/qa-html-language-declarations)

@@ -1,0 +1,66 @@
+---
+date: '2021-06-03'
+title: 'The head tag'
+category: 'html5-series'
+---
+
+### Quick look
+
+|                       |                |
+| --------------------- | -------------- |
+| **Required?**         | sort of?       |
+| **Common attributes** | typically none |
+| **Common aria**       | none allowed   |
+
+### Summary
+
+The `head` tag is where metadata about the page will go, such as
+page title, stylesheet links, and SEO information. Outside of your typical
+HTML webpage, the `head` tag should not be used for iframe, srcdoc, or
+email content. This blog entry will only be covering `head` as it's used
+in typical web development.
+
+Typical children of the `head` tag include:
+
+- `title`
+- `base`
+- `link`
+- `style`
+- `meta`
+- `script`
+- `noscript`
+- `template`
+
+While it's not strictly required, it's good practice to include it. If
+you omit the tag, browsers will usually insert it for you. Because
+browsers can have different behavior, you _may_ get unexpected side effects
+relying on this implementation.
+
+`head` must be the first child of the `html` tag (`body` being the second child).
+
+### Attributes
+
+In previous specs, the `profile` attribute could be used. This has been removed
+in HTML5.
+
+[Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+### Usage
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    …
+  </head>
+  <body>
+    …
+  </body>
+</html>
+```
+
+_Note: `…` denotes miscellaneous HTML, removed for brevity._
+
+### Links
+
+[MDN: The head tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)
