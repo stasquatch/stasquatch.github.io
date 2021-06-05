@@ -86,11 +86,15 @@ class Terrazzo extends Component {
   resizeListener = () => {
     let width = document.body.clientWidth;
     let height = document.body.clientHeight;
+    let currentBlobCount = blobCount(width, height, largeBlobSize);
+
+    // if there's no change, return early
+    if (currentBlobCount === this.state.numberOfBlobs) return;
 
     this.setState({
       width,
       height,
-      numberOfBlobs: blobCount(width, height, largeBlobSize),
+      numberOfBlobs: blobCount,
     });
   };
 
