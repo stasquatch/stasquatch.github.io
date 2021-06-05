@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "stasquatch.github.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal blog/about me site for a stasquatch technologist",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "stasquatch",
   "dependencies": {
     "@fontsource/lato": "^4.2.2",
     "@fontsource/nunito-sans": "^4.2.2",
@@ -51,10 +51,6 @@
     "pretty-quick": "^3.1.0",
     "react-test-renderer": "^17.0.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
