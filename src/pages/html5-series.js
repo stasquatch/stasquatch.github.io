@@ -34,7 +34,7 @@ const Html5SeriesPage = props => {
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: [frontmatter___title], order: ASC }) {
+    allMdx(sort: { fields: [frontmatter___title], order: DESC }) {
       edges {
         node {
           id
