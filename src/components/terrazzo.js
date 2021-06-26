@@ -94,7 +94,7 @@ class Terrazzo extends Component {
     this.setState({
       width,
       height,
-      numberOfBlobs: blobCount,
+      numberOfBlobs: currentBlobCount,
     });
   };
 
