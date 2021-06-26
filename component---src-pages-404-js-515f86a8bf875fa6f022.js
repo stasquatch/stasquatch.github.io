@@ -1,0 +1,2 @@
+(self.webpackChunkstasquatch_github_io=self.webpackChunkstasquatch_github_io||[]).push([[883],{9616:function(t,e,u){"use strict";u.r(e);var n=u(7294),a=u(7339),s=u(7487);e.default=function(){return n.createElement(a.Z,null,n.createElement(s.Z,{title:"404: Not found"}),n.createElement("h1",null,"404: Not Found"),n.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-515f86a8bf875fa6f022.js.map
